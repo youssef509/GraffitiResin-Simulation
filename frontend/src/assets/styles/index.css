@@ -1,0 +1,68 @@
+/* General styles */
+body {
+  background-color: #ccc;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Simulator display container */
+.simulator-display {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.display-area {
+  position: relative; /* Allows absolute positioning of child elements */
+  width: 400px; /* Adjust based on your images */
+  height: 400px; /* Adjust based on your images */
+  margin: 0 auto;
+  border: 1px solid #ccc; /* Optional: Adds border to the display area */
+  background-color: #f4f4f4; /* Fallback background color */
+  overflow: hidden; /* Ensures layers don't spill outside the container */
+}
+
+/* Layer styles */
+.layer {
+  position: absolute; /* Layers stack on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images maintain aspect ratio */
+}
+
+.background-layer {
+  z-index: 1; /* Lowest layer (background) */
+}
+
+.marble-layer {
+  z-index: 2; /* Marbles layer on top */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .display-area {
+    width: 100%;
+    height: auto;
+  }
+}
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
